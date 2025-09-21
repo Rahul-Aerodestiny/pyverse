@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Python - PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/python-bg.jpg') center/cover no-repeat;
+      color: #ffc107;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #ffc107;
+    }
+    .example-box {
+      background: #111a22;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.2rem;
+      color: #ffe082;
+      margin-bottom: 2rem;
+    }
+    .btn { border-radius: 25px; padding: 0.6rem 1.4rem;}
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="introduction.html">PyVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+        <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Intro -->
+<section class="hero text-center py-5">
+  <div class="container">
+    <img src="images/python-logo.png" alt="Python Logo" width="120" class="mb-4">
+    <h1 class="display-4 fw-bold">Introduction to Python Programming</h1>
+    <p class="lead text-light mt-3">Python is a powerful, easy-to-learn, and versatile programming language loved by beginners and professionals alike. Start your coding journey here!</p>
+    <a href="basic.html" class="btn btn-lg btn-warning shadow mt-3">Start Basic Python &rarr;</a>
+  </div>
+</section>
+
+<!-- What is Python? -->
+<section class="container mb-5">
+  <h2 class="section-title">What is Python?</h2>
+  <p>
+    <b>Python</b> is a high-level, interpreted programming language created by <b>Guido van Rossum</b> and first released in 1991. Known for its clear syntax and readability, Python is widely used for web development, automation, data science, machine learning, scripting, and more.
+  </p>
+  <ul>
+    <li>Open-source and freely available for everyone</li>
+    <li>Supports multiple programming paradigms: procedural, object-oriented, and functional</li>
+    <li>Extensive library support for almost any task</li>
+    <li>Large, active community for support and learning</li>
+  </ul>
+</section>
+
+<!-- Key Features -->
+<section class="container mb-5">
+  <h2 class="section-title">Key Features of Python</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+    <div class="col"><div class="p-3"><span class="feature-icon">&#128272;</span><br><b>Simple Syntax</b><br>Easy to read and write, similar to English</div></div>
+    <div class="col"><div class="p-3"><span class="feature-icon">&#128199;</span><br><b>Cross-Platform</b><br>Runs on Windows, Mac, Linux, and more</div></div>
+    <div class="col"><div class="p-3"><span class="feature-icon">&#9881;&#65039;</span><br><b>Extensible</b><br>Integrates with C/C++, Java, and other languages</div></div>
+    <div class="col"><div class="p-3"><span class="feature-icon">&#128295;</span><br><b>Vast Libraries</b><br>Thousands of packages for any task</div></div>
+  </div>
+</section>
+
+<!-- Where is Python Used -->
+<section class="container mb-5">
+  <h2 class="section-title">What Can You Build with Python?</h2>
+  <div class="row text-center g-3">
+    <div class="col-md-3 col-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <b>Web Apps</b><br>
+          <span class="text-secondary">Django, Flask</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <b>Automation</b><br>
+          <span class="text-secondary">Scripts, Bots</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <b>Data Science</b><br>
+          <span class="text-secondary">Pandas, NumPy</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <b>AI &amp; ML</b><br>
+          <span class="text-secondary">TensorFlow, Scikit-learn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sample Python Code -->
+<section class="container mb-5">
+  <h2 class="section-title">Your First Python Code</h2>
+  <div class="example-box">
+    <b>Example:</b> Print "Hello, World!"
+    <pre><code>print("Hello, World!")</code></pre>
+  </div>
+  <div class="example-box">
+    <b>Variable Assignment & Simple Math</b>
+    <pre><code>x = 10
+y = 5
+print("Sum is", x + y)   # Output: Sum is 15
+</code></pre>
+  </div>
+</section>
+
+<!-- Tips and Learning Path -->
+<section class="container mb-5">
+  <h2 class="section-title">How to Learn Python Effectively</h2>
+  <ul>
+    <li>Practice by writing and running code regularly</li>
+    <li>Break large problems into small steps</li>
+    <li>Use interactive resources and online exercises</li>
+    <li>Don't fear errors—debugging helps you learn!</li>
+    <li>Explore basic, intermediate, and advanced topics step-by-step</li>
+  </ul>
+</section>
+
+<!-- Resources -->
+<section class="container mb-5">
+  <h2 class="section-title">Python Resources</h2>
+  <ul>
+    <li><a href="https://www.python.org/" target="_blank">Official Python Website</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a></li>
+    <li><a href="https://www.freecodecamp.org/news/tag/python/" target="_blank">FreeCodeCamp Python Guides</a></li>
+  </ul>
+</section>
+
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

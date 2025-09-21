@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Tutorial Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">PyVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+        <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-center text-light">
+  <div class="container">
+    <img src="images/profile.jpg" class="rounded-circle shadow-lg mb-3" width="150" alt="Profile">
+    <h1 class="display-4 fw-bold">Welcome to PyVerse</h1>
+    <p class="lead">Learn Python from Basics to Advanced with Interactive Coding</p>
+    <a href="basic.html" class="btn btn-lg btn-warning shadow">Start Learning</a> <br/> <p></p>
+    <a href="quiz.html" class="btn btn-lg btn-warning shadow">Or Do a Self Assessment First</a>
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-4 fw-bold">Explore Python</h2>
+  <div class="row g-4">
+    <div class="col-md-4 d-flex">
+      <div class="card flex-fill shadow hover-card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Basic Python</h5>
+          <p class="card-text">Control Flow, Conditionals, Loops, Iterables, Functions.</p>
+          <a href="basic.html" class="btn btn-outline-primary">Start</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex">
+      <div class="card flex-fill shadow hover-card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Intermediate Python</h5>
+          <p class="card-text">OOP, Decorators, Generators, Modules, File Handling.</p>
+          <a href="intermediate.html" class="btn btn-outline-success">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex">
+      <div class="card flex-fill shadow hover-card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Advanced Python</h5>
+          <p class="card-text">AsyncIO, Metaclasses, Design Patterns, Type Hints.</p>
+          <a href="advanced.html" class="btn btn-outline-danger">Advance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

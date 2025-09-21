@@ -1,0 +1,21 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/python-bg.jpg') center/cover no-repeat;
+  height: 90vh;
+}
+
+/* Card Hover */
+.hover-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 25px;
+  padding: 0.6rem 1.4rem;
+}

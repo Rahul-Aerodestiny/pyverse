@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      background: #f7f9fc;
+    }
+    .quiz-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    }
+    .certificate {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="quiz-container">
+      <h2 class="mb-4 text-center">Python Self Assessment</h2>
+      <p class="mb-4 text-center">{ Score More than 20 Marks to Get a Certificate }</p>
+      <div class="mb-3">
+        <label for="studentName" class="form-label">Enter your name:</label>
+        <input type="text" class="form-control" id="studentName" placeholder="Student Name">
+      </div>
+
+      <div id="quiz" class="row">
+  <!-- Q1 -->
+  <div class="mb-3 col-12">
+    <p><strong>Q1:</strong> Which keyword is used to define a function in Python?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1a" value="def">
+      <label class="form-check-label" for="q1a">def</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1b" value="func">
+      <label class="form-check-label" for="q1b">func</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" id="q1c" value="function">
+      <label class="form-check-label" for="q1c">function</label>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="mb-3 col-12">
+    <p><strong>Q2:</strong> What is the output of <code>len([1,2,3])</code>?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2a" value="2">
+      <label class="form-check-label" for="q2a">2</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2b" value="3">
+      <label class="form-check-label" for="q2b">3</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" id="q2c" value="Error">
+      <label class="form-check-label" for="q2c">Error</label>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="mb-3 col-12">
+    <p><strong>Q3:</strong> Which data type is immutable in Python?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3a" value="list">
+      <label class="form-check-label" for="q3a">List</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3b" value="tuple">
+      <label class="form-check-label" for="q3b">Tuple</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" id="q3c" value="dict">
+      <label class="form-check-label" for="q3c">Dictionary</label>
+    </div>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="mb-3 col-12">
+  <p><strong>Q4:</strong> How do you start a comment in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q4" id="q4a" value="//">
+    <label class="form-check-label" for="q4a">//</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q4" id="q4b" value="##">
+    <label class="form-check-label" for="q4b">##</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q4" id="q4c" value="#">
+    <label class="form-check-label" for="q4c">#</label>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="mb-3 col-12">
+  <p><strong>Q5:</strong> What is the output of <code>print(type("7"))</code>?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q5" id="q5a" value="int">
+    <label class="form-check-label" for="q5a">&lt;class 'int'&gt;</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q5" id="q5b" value="str">
+    <label class="form-check-label" for="q5b">&lt;class 'str'&gt;</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q5" id="q5c" value="float">
+    <label class="form-check-label" for="q5c">&lt;class 'float'&gt;</label>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div class="mb-3 col-12">
+  <p><strong>Q6:</strong> What does <code>range(5)</code> produce?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q6" id="q6a" value="[1,2,3,4,5]">
+    <label class="form-check-label" for="q6a">[1,2,3,4,5]</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q6" id="q6b" value="[0,1,2,3,4]">
+    <label class="form-check-label" for="q6b">[0,1,2,3,4]</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q6" id="q6c" value="[0,1,2,3,4,5]">
+    <label class="form-check-label" for="q6c">[0,1,2,3,4,5]</label>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div class="mb-3 col-12">
+  <p><strong>Q7:</strong> What is the correct way to import the math module?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q7" id="q7a" value="include math">
+    <label class="form-check-label" for="q7a">include math</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q7" id="q7b" value="import math">
+    <label class="form-check-label" for="q7b">import math</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q7" id="q7c" value="using math">
+    <label class="form-check-label" for="q7c">using math</label>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div class="mb-3 col-12">
+  <p><strong>Q8:</strong> Which of these is a correct variable name?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q8" id="q8a" value="2nd_var">
+    <label class="form-check-label" for="q8a">2nd_var</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q8" id="q8b" value="my-var">
+    <label class="form-check-label" for="q8b">my-var</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q8" id="q8c" value="my_var">
+    <label class="form-check-label" for="q8c">my_var</label>
+  </div>
+</div>
+
+<!-- Q9 -->
+<div class="mb-3 col-12">
+  <p><strong>Q9:</strong> What will <code>print(10 // 3)</code> output?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q9" id="q9a" value="3">
+    <label class="form-check-label" for="q9a">3</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q9" id="q9b" value="3.33">
+    <label class="form-check-label" for="q9b">3.33</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q9" id="q9c" value="4">
+    <label class="form-check-label" for="q9c">4</label>
+  </div>
+</div>
+
+<!-- Q10 -->
+<div class="mb-3 col-12">
+  <p><strong>Q10:</strong> What is the result of <code>bool([])</code>?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q10" id="q10a" value="True">
+    <label class="form-check-label" for="q10a">True</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q10" id="q10b" value="False">
+    <label class="form-check-label" for="q10b">False</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q10" id="q10c" value="Error">
+    <label class="form-check-label" for="q10c">Error</label>
+  </div>
+</div>
+
+<!-- Q11 -->
+<div class="mb-3 col-12">
+  <p><strong>Q11:</strong> How do you define a dictionary in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q11" id="q11a" value="{}">
+    <label class="form-check-label" for="q11a">{}</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q11" id="q11b" value="[]">
+    <label class="form-check-label" for="q11b">[]</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q11" id="q11c" value="{'a': 1, 'b': 2}">
+    <label class="form-check-label" for="q11c">{'a': 1, 'b': 2}</label>
+  </div>
+</div>
+
+<!-- Q12 -->
+<div class="mb-3 col-12">
+  <p><strong>Q12:</strong> Which function can be used to get input from a user?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q12" id="q12a" value="scan()">
+    <label class="form-check-label" for="q12a">scan()</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q12" id="q12b" value="input()">
+    <label class="form-check-label" for="q12b">input()</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q12" id="q12c" value="cin()">
+    <label class="form-check-label" for="q12c">cin()</label>
+  </div>
+</div>
+
+<!-- Q13 -->
+<div class="mb-3 col-12">
+  <p><strong>Q13:</strong> What is the output of <code>print('Hello' + str(5))</code>?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q13" id="q13a" value="Hello">
+    <label class="form-check-label" for="q13a">Hello</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q13" id="q13b" value="Hello5">
+    <label class="form-check-label" for="q13b">Hello5</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q13" id="q13c" value="Hello 5">
+    <label class="form-check-label" for="q13c">Hello 5</label>
+  </div>
+</div>
+
+<!-- Q14 -->
+<div class="mb-3 col-12">
+  <p><strong>Q14:</strong> How do you handle exceptions in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q14" id="q14a" value="try-except">
+    <label class="form-check-label" for="q14a">try-except</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q14" id="q14b" value="do-catch">
+    <label class="form-check-label" for="q14b">do-catch</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q14" id="q14c" value="error handling">
+    <label class="form-check-label" for="q14c">error handling</label>
+  </div>
+</div>
+
+<!-- Q15 -->
+<div class="mb-3 col-12">
+  <p><strong>Q15:</strong> Which one is not a Python data structure?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q15" id="q15a" value="List">
+    <label class="form-check-label" for="q15a">List</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q15" id="q15b" value="Graph">
+    <label class="form-check-label" for="q15b">Graph</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q15" id="q15c" value="Dictionary">
+    <label class="form-check-label" for="q15c">Dictionary</label>
+  </div>
+</div>
+
+<!-- Q16 -->
+<div class="mb-3 col-12">
+  <p><strong>Q16:</strong> What is the output of <code>[i for i in range(3)]</code>?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q16" id="q16a" value="[0, 1, 2]">
+    <label class="form-check-label" for="q16a">[0, 1, 2]</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q16" id="q16b" value="(0, 1, 2)">
+    <label class="form-check-label" for="q16b">(0, 1, 2)</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q16" id="q16c" value="[1, 2, 3]">
+    <label class="form-check-label" for="q16c">[1, 2, 3]</label>
+  </div>
+</div>
+
+<!-- Q17 -->
+<div class="mb-3 col-12">
+  <p><strong>Q17:</strong> How do you open a file for writing in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q17" id="q17a" value="open('data.txt', 'r')">
+    <label class="form-check-label" for="q17a">open('data.txt', 'r')</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q17" id="q17b" value="open('data.txt', 'w')">
+    <label class="form-check-label" for="q17b">open('data.txt', 'w')</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q17" id="q17c" value="open('data.txt', 'rw')">
+    <label class="form-check-label" for="q17c">open('data.txt', 'rw')</label>
+  </div>
+</div>
+
+<!-- Q18 -->
+<div class="mb-3 col-12">
+  <p><strong>Q18:</strong> Which built-in function returns the length of an object?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q18" id="q18a" value="size()">
+    <label class="form-check-label" for="q18a">size()</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q18" id="q18b" value="length()">
+    <label class="form-check-label" for="q18b">length()</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q18" id="q18c" value="len()">
+    <label class="form-check-label" for="q18c">len()</label>
+  </div>
+</div>
+
+<!-- Q19 -->
+<div class="mb-3 col-12">
+  <p><strong>Q19:</strong> What is a lambda function?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q19" id="q19a" value="Anonymous function">
+    <label class="form-check-label" for="q19a">Anonymous function</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q19" id="q19b" value="Recursive function">
+    <label class="form-check-label" for="q19b">Recursive function</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q19" id="q19c" value="Sorted function">
+    <label class="form-check-label" for="q19c">Sorted function</label>
+  </div>
+</div>
+
+<!-- Q20 -->
+<div class="mb-3 col-12">
+  <p><strong>Q20:</strong> Which operator checks equality?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q20" id="q20a" value="=">
+    <label class="form-check-label" for="q20a">=</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q20" id="q20b" value="==">
+    <label class="form-check-label" for="q20b">==</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q20" id="q20c" value="===">
+    <label class="form-check-label" for="q20c">===</label>
+  </div>
+</div>
+
+<!-- Q21 -->
+<div class="mb-3 col-12">
+  <p><strong>Q21:</strong> What is list slicing?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q21" id="q21a" value="Selecting a part of a list">
+    <label class="form-check-label" for="q21a">Selecting a part of a list</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q21" id="q21b" value="Multiplying a list">
+    <label class="form-check-label" for="q21b">Multiplying a list</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q21" id="q21c" value="Deleting a list">
+    <label class="form-check-label" for="q21c">Deleting a list</label>
+  </div>
+</div>
+
+<!-- Q22 -->
+<div class="mb-3 col-12">
+  <p><strong>Q22:</strong> What is the output of <code>'Py' * 2</code>?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q22" id="q22a" value="PyPy">
+    <label class="form-check-label" for="q22a">PyPy</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q22" id="q22b" value="SyntaxError">
+    <label class="form-check-label" for="q22b">SyntaxError</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q22" id="q22c" value="'Py 2'">
+    <label class="form-check-label" for="q22c">'Py 2'</label>
+  </div>
+</div>
+
+<!-- Q23 -->
+<div class="mb-3 col-12">
+  <p><strong>Q23:</strong> What is the use of <code>pass</code> in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q23" id="q23a" value="Terminates program">
+    <label class="form-check-label" for="q23a">Terminates program</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q23" id="q23b" value="Does nothing, acts as a placeholder">
+    <label class="form-check-label" for="q23b">Does nothing, acts as a placeholder</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q23" id="q23c" value="Loops program">
+    <label class="form-check-label" for="q23c">Loops program</label>
+  </div>
+</div>
+
+<!-- Q24 -->
+<div class="mb-3 col-12">
+  <p><strong>Q24:</strong> How do you define a class in Python?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q24" id="q24a" value="class MyClass:">
+    <label class="form-check-label" for="q24a">class MyClass:</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q24" id="q24b" value="define MyClass">
+    <label class="form-check-label" for="q24b">define MyClass</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q24" id="q24c" value="class = MyClass">
+    <label class="form-check-label" for="q24c">class = MyClass</label>
+  </div>
+</div>
+
+<!-- Q25 -->
+<div class="mb-3 col-12">
+  <p><strong>Q25:</strong> Which method is called when an object is created?</p>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q25" id="q25a" value="__init__">
+    <label class="form-check-label" for="q25a">__init__</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q25" id="q25b" value="__start__">
+    <label class="form-check-label" for="q25b">__start__</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="q25" id="q25c" value="__create__">
+    <label class="form-check-label" for="q25c">__create__</label>
+  </div>
+</div>
+
+
+   <div class="d-flex justify-content-center mt-3 gap-2">
+     <button class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+     <button class="btn btn-secondary" onclick="resetQuiz()">Reset Quiz</button>
+   </div>
+
+      <div id="result" class="mt-4 mb-2"></div>
+      <!-- Certificate Section -->
+      <div id="certificate" class="certificate">
+        <h3>🎉 Congratulations!</h3>
+        <p>You’ve successfully completed the Python Self Assessment.</p>
+        <button class="btn btn-success" onclick="downloadCertificate()">Download Certificate</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function submitQuiz() {
+  let score = 0;
+  // Answers keyed by question number
+  const answers = {
+    q1: "def",
+    q2: "3",
+    q3: "tuple",
+    q4: "#",
+    q5: "str",
+    q6: "[0,1,2,3,4]",
+    q7: "import math",
+    q8: "my_var",
+    q9: "3",
+    q10: "False",
+    q11: "{'a': 1, 'b': 2}",
+    q12: "input()",
+    q13: "Hello5",
+    q14: "try-except",
+    q15: "Graph",
+    q16: "[0, 1, 2]",
+    q17: "open('data.txt', 'w')",
+    q18: "len()",
+    q19: "Anonymous function",
+    q20: "==",
+    q21: "Selecting a part of a list",
+    q22: "PyPy",
+    q23: "Does nothing, acts as a placeholder",
+    q24: "class MyClass:",
+    q25: "__init__"
+  };
+
+  for (let q = 1; q <= 25; q++) {
+    if (document.querySelector(`input[name="q${q}"]:checked`)?.value === answers[`q${q}`]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerHTML = `<h4>Your Score: ${score}/25</h4>`;
+  if (score >= 20) {
+    document.getElementById("certificate").style.display = "block";
+  } else {
+    document.getElementById("certificate").style.display = "none";
+  }
+}
+
+    function resetQuiz() {
+      // Uncheck all radio buttons
+      document.querySelectorAll('input[type=radio]').forEach(el => el.checked = false);
+      // Clear result and hide certificate
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("certificate").style.display = "none";
+    }
+    
+function downloadCertificate() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({
+    orientation: 'landscape'
+  });
+
+  // Get the name from the input
+  const name = document.getElementById("studentName")?.value || "Student";
+  const date = new Date().toLocaleDateString();
+
+  // Draw border
+  doc.setDrawColor(0, 62, 152);
+  doc.setLineWidth(2);
+  doc.rect(10, 10, 277, 177, 'S'); // Border rectangle
+  
+  // Title
+  doc.setFontSize(28);
+  doc.setTextColor(40, 40, 80);
+  doc.setFont("helvetica", "bold");
+  doc.text("Certificate of Completion", 148.5, 40, { align: "center" });
+
+  // Subtitle
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "italic");
+  doc.setTextColor(60, 60, 100);
+  doc.text("This is to certify that", 148.5, 60, { align: "center" });
+
+  // Student Name (bigger, bold)
+  doc.setFontSize(24);
+  doc.setFont("times", "bolditalic");
+  doc.setTextColor(0, 62, 152);
+  doc.text(name, 148.5, 80, { align: "center" });
+
+  // Achievement
+  doc.setFontSize(16);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(60, 60, 100);
+  doc.text(
+    "has successfully completed the Python Self Assessment Quiz",
+    148.5, 100, { align: "center" }
+  );
+
+  // Date
+  doc.setFontSize(12);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(80, 80, 80);
+  doc.text(`Date: ${date}`, 230, 120);
+
+  // Authorized by (Signature placeholder)
+  doc.setFontSize(14);
+  doc.text("Authorized by: PyVerse", 148.5, 150, { align: "center" });
+  doc.setLineWidth(0.4);
+  doc.line(120, 145, 177, 145); // signature line
+
+  // Download
+  doc.save("Python_Certificate.pdf");
+}
+
+  </script>
+
+</body>
+</html>

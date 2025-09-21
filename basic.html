@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Python - PyVerse</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    }
+    .sidebar {
+      min-width: 180px;
+      max-width: 220px;
+      background: #23272b;
+      padding: 1.5rem 0.75rem 1.5rem 0.75rem;
+      border-radius: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 24px 0 rgba(0,0,0,0.10);
+      height: fit-content;
+      position: sticky;
+      top: 90px;
+    }
+    .sidebar .nav-link {
+      color: #ffc107;
+      font-weight: 500;
+      margin-bottom: 7px;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      transition: background 0.15s, color 0.15s;
+      text-align: left;
+    }
+    .sidebar .nav-link.active, .sidebar .nav-link:hover {
+      background: #343a40 !important;
+      color: #fff !important;
+    }
+    .sidebar .nav-link:not(.active) {
+      color: #ffc107a9;
+    }
+    .sidebar .nav.flex-column {
+      margin-left: 14px;
+    }
+    @media (max-width: 991.98px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .content-section {
+      margin-left: 0;
+      padding: 2rem 2rem 2rem 2rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(33, 37, 41, 0.07);
+      min-height: 70vh;
+    }
+    @media (min-width: 768px) {
+      .content-section {
+        margin-left: 20px;
+      }
+    }
+    h1 {
+      font-weight: 800;
+      color: #343a40;
+      margin-bottom: 1.7rem;
+    }
+    h2, h4 {
+      font-weight: 700;
+      color: #343a40;
+      margin-top: 1.5rem;
+    }
+    p, li {
+      line-height: 1.6;
+      color: #434343;
+    }
+    ul {
+      margin-top: 1.5rem;
+    }
+    footer {
+      background: #23272b;
+      color: #ffc107;
+      font-size: 1rem;
+      margin-top: 3rem;
+      border-radius: 0 0 14px 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">PyVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="basic.html">Basic Python</a></li>
+          <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+          <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+          <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="container-fluid py-4">
+    <div class="row flex-nowrap">
+      <!-- Sidebar: each link is a separate page -->
+      <nav class="col-auto sidebar d-flex flex-column align-items-start px-3">
+        <a class="nav-link active" href="basic.html">Overview</a>
+        <a class="nav-link" href="introduction.html">Introduction</a>
+        <a class="nav-link" href="syntax-comments.html">Syntax & Comments</a>
+        <a class="nav-link" href="variables.html">Variables & Data Types</a>
+        <a class="nav-link" href="input-output.html">Input & Output</a>
+        <a class="nav-link" href="operators.html">Operators</a>
+        <a class="nav-link" href="conditionals.html">Conditionals (if/else)</a>
+        <a class="nav-link" href="loops.html">Loops (for/while)</a>
+        <a class="nav-link" href="strings.html">Working with Strings</a>
+        <a class="nav-link" href="lists.html">Lists</a>
+        <a class="nav-link" href="tuples.html">Tuples</a>
+        <a class="nav-link" href="dicts.html">Dictionaries</a>
+        <a class="nav-link" href="sets.html">Sets</a>
+        <a class="nav-link" href="iteration.html">Iterating Over Data</a>
+        <a class="nav-link" href="functions.html">Functions</a>
+        <a class="nav-link" href="error-handling.html">Basic Error Handling</a>
+        <a class="nav-link" href="style.html">Python Style & Best Practices</a>
+      </nav>
+
+      <!-- Content Area -->
+      <main class="col ps-md-4 content-section">
+        <h1>Basic Python Roadmap</h1>
+        <p>
+          Welcome to PyVerse. This series is designed for absolute beginners to Python.  
+          Use the left menu to open a detailed, practice-focused page for each topic below.
+        </p>
+        <ol>
+          <li><b><a href="introduction.html">Introduction</a>: What is Python? What can you do with it? Setting up your environment.</b></li>
+          <li><b><a href="syntax-comments.html">Python Syntax & Comments</a>: Indentation, code structure, and writing comments.</b></li>
+          <li><b><a href="variables.html">Variables & Data Types</a>: Numbers, strings, booleans, and how to store values.</b></li>
+          <li><b><a href="input-output.html">Input & Output</a>: Printing and reading user input.</b></li>
+          <li><b><a href="operators.html">Operators</a>: Arithmetic, comparison, and logical operators.</b></li>
+          <li><b><a href="conditionals.html">Conditionals</a>: Making decisions with if/else.</b></li>
+          <li><b><a href="loops.html">Loops</a>: Repeating things with for and while loops.</b></li>
+          <li><b><a href="strings.html">Working with Strings</a>: Manipulating text in Python.</b></li>
+          <li><b><a href="lists.html">Lists</a>: Storing ordered collections of data.</b></li>
+          <li><b><a href="tuples.html">Tuples</a>: Immutable sequences.</b></li>
+          <li><b><a href="dicts.html">Dictionaries</a>: Key-value maps.</b></li>
+          <li><b><a href="sets.html">Sets</a>: Unique, unordered collections.</b></li>
+          <li><b><a href="iteration.html">Iterating Over Data</a>: Ways to loop through containers.</b></li>
+          <li><b><a href="functions.html">Functions</a>: Reusable blocks of logic.</b></li>
+          <li><b><a href="error-handling.html">Basic Error Handling</a>: Using try/except for basic errors.</b></li>
+          <li><b><a href="style.html">Python Style & Best Practices</a>: Writing readable and maintainable code.</b></li>
+        </ol>
+        <p class="mt-4"><i>Start from the top and move down for a smooth, step-by-step Python journey!</i></p>
+      </main>
+    </div>
+  </div>
+
+  <footer class="text-center py-3 mt-5">
+    <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

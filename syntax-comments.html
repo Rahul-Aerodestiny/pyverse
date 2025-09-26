@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Syntax: Comments - PyVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: whitesmoke;
+            color: black;
+        }
+        .hero {
+            background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/python-bg.jpg') center/cover no-repeat;
+            color: #ffc107;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section-title {
+            color: #0d6efd;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        .example-box {
+            background: #111a22;
+            border-left: 5px solid #ffc107;
+            border-radius: 8px;
+            padding: 1.2rem;
+            color: #ffe082;
+            margin-bottom: 2rem;
+        }
+        .btn { border-radius: 25px; padding: 0.6rem 1.4rem;}
+        .navbar-brand i { font-size: 1.5rem; margin-right: 0.5rem; }
+        pre { background: #23272f; color: #ffe082; border-radius: 6px; padding: 1rem; }
+        ul { margin-left: 1.5rem; }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-playstation"></i> PyVerse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+                <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+                <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+                <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center py-5">
+    <div class="container">
+        <img src="images/python-logo.png" alt="Python Logo" width="100" class="mb-2">
+        <h1 class="display-5 fw-bold">Python Syntax: Comments</h1>
+        <p class="lead text-light mt-3">Learn how to use comments in Python code to make your programs more readable and maintainable.</p>
+        <a href="basic.html" class="btn btn-lg btn-warning shadow mt-3">Back to Basics &rarr;</a>
+    </div>
+</section>
+
+<!-- What are Comments? -->
+<section class="container mb-5">
+    <h2 class="section-title">What are Comments?</h2>
+    <p>
+        <b>Comments</b> are lines in Python code that are ignored by the interpreter. They help explain your code, make it easier to read, or temporarily disable code during testing.
+    </p>
+</section>
+
+<!-- Single-line Comments -->
+<section class="container mb-5">
+    <h2 class="section-title">Single-line Comments</h2>
+    <div class="example-box">
+        <b>Syntax:</b> Use <code>#</code> to start a comment. Everything after <code>#</code> on that line is ignored.
+        <pre><code># This is a single-line comment
+print("Hello, World!")  # This comment is after code
+</code></pre>
+    </div>
+</section>
+
+<!-- Multi-line Comments -->
+<section class="container mb-5">
+    <h2 class="section-title">Multi-line Comments</h2>
+    <p>
+        Python does not have a dedicated multi-line comment syntax. You can use several <code>#</code> lines, or use a multi-line string (triple quotes) as a comment.
+    </p>
+    <div class="example-box">
+        <b>Example:</b>
+        <pre><code># This is a comment
+# that spans multiple lines
+
+"""
+This is a multi-line string,
+often used as a multi-line comment.
+"""
+</code></pre>
+        <small class="text-warning">Note: Triple-quoted strings are not technically comments, but if not assigned to a variable, they are ignored by the interpreter.</small>
+    </div>
+</section>
+
+<!-- Best Practices -->
+<section class="container mb-5">
+    <h2 class="section-title">Best Practices for Comments</h2>
+    <ul>
+        <li>Use comments to explain <b>why</b> something is done, not <b>what</b> is done.</li>
+        <li>Keep comments up-to-date with code changes.</li>
+        <li>Write clear code so you need fewer comments.</li>
+        <li>Don't overuse comments—focus on readability.</li>
+    </ul>
+</section>
+
+<footer class="bg-dark text-center text-light py-3 mt-5">
+    <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

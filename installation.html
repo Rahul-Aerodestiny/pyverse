@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Installation Guide - PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .content-card {
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 25px;
+      color: #212529;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease-in-out;
+    }
+    .content-card:hover {
+      transform: translateY(-5px);
+    }
+    pre {
+      background: #212529;
+      color: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+    code {
+      color: #ffd966;
+    }
+    .step-icon {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+    .progress-container {
+      margin: 30px auto;
+      max-width: 700px;
+    }
+    .hero {
+      background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/python-bg.jpg') center/cover no-repeat;
+      color: #ffc107;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-playstation"></i> PyVerse
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center py-5">
+    <div class="container">
+        <img src="images/python-logo.png" alt="Python Logo" width="120" class="mb-2">
+        <h1 class="display-5 fw-bold">Python Syntax: Comments</h1>
+        <p class="lead text-light mt-3">Learn how to use comments in Python code to make your programs more readable and maintainable.</p>
+        <a href="basic.html" class="btn btn-lg btn-warning shadow mt-3">Back to Basics &rarr;</a>
+    </div>
+</section>
+
+<!-- Progress Bar -->
+<div class="container progress-container">
+  <div class="progress" style="height: 25px;">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 33%">Step 1</div>
+    <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 33%">Step 2</div>
+    <div class="progress-bar bg-info" role="progressbar" style="width: 34%">Step 3</div>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="container mt-4 mb-5">
+  <h1 class="fw-bold mb-4 text-center">
+    <i class="bi bi-gear-wide-connected text-primary"></i> Python Installation & Setup
+  </h1>
+
+  <div class="content-card bg-success text-light">
+    <h3><i class="bi bi-download step-icon"></i> Step 1: Install Python</h3>
+    <p>
+      - Download Python from the official site: 
+      <a href="https://www.python.org/downloads/" class="text-light fw-bold" target="_blank">python.org/downloads</a> <br>
+      - During installation, check <b>"Add Python to PATH"</b>.  
+      - Verify installation in terminal:  
+      <code>python --version</code> or <code>python3 --version</code>
+    </p>
+  </div>
+
+  <div class="content-card bg-warning text-dark">
+    <h3><i class="bi bi-box step-icon"></i> Step 2: Setup Virtual Environment</h3>
+    <p>
+      Virtual environments help you isolate dependencies for different projects.  
+    </p>
+    <pre><code>
+# Install virtualenv if not installed
+pip install virtualenv
+
+# Create virtual environment
+python -m venv myenv
+
+# Activate virtual environment
+# On Windows
+myenv\Scripts\activate
+# On Mac/Linux
+source myenv/bin/activate
+
+# Deactivate environment
+deactivate
+    </code></pre>
+  </div>
+
+  <div class="content-card bg-info text-dark">
+    <h3><i class="bi bi-play-circle step-icon"></i> Step 3: Getting Started</h3>
+    <p>Once installed, test your setup:</p>
+    <pre><code>
+python
+>>> print("Hello, PyVerse!")
+    </code></pre>
+  </div>
+</div>
+
+</body>
+</html>

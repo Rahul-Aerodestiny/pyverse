@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Lists | PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    .exercise-box {
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    h4.card-title i {
+      color: #4facfe;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-terminal-fill"></i> PyVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+          <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+          <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Self Assessment</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-5 fw-bold"><i class="bi bi-list-check"></i> Python Lists</h1>
+      <p class="lead">Master ordered, mutable collections with practical examples.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <!-- Intro -->
+      <div class="col-12">
+        <div class="card shadow border-0">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-lightbulb"></i> What are Lists?</h4>
+            <p>Lists in Python are <b>ordered, mutable</b> collections that can store multiple elements, including different data types. They are one of the most powerful and commonly used data structures.</p>
+            <div class="code-block"><pre>
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])   # Output: apple
+print(len(fruits)) # Output: 3
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creating Lists -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-plus-circle"></i> Creating Lists</h4>
+            <p>Lists can be created using square brackets <code>[]</code> or the <code>list()</code> constructor.</p>
+            <div class="code-block"><pre>
+numbers = [1, 2, 3, 4]
+mixed = [1, "hello", 3.5, True]
+empty = list()
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indexing & Slicing -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-cursor"></i> Indexing & Slicing</h4>
+            <p>Lists support zero-based indexing and slicing like strings.</p>
+            <div class="code-block"><pre>
+fruits = ["apple", "banana", "cherry", "date"]
+print(fruits[1])     # banana
+print(fruits[-1])    # date
+print(fruits[1:3])   # ['banana', 'cherry']
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iteration -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-arrow-repeat"></i> Iterating over Lists</h4>
+            <div class="code-block"><pre>
+for fruit in fruits:
+    print(fruit)
+
+for i, fruit in enumerate(fruits):
+    print(i, fruit)
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adding & Removing -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-gear"></i> Adding & Removing</h4>
+            <div class="code-block"><pre>
+fruits.append("kiwi")
+fruits.insert(1, "mango")
+fruits.remove("banana")
+last = fruits.pop()
+fruits.clear()
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sorting -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-sort-alpha-down"></i> Sorting & Reversing</h4>
+            <div class="code-block"><pre>
+numbers = [4, 2, 9, 1]
+numbers.sort()         # [1, 2, 4, 9]
+numbers.sort(reverse=True)
+numbers.reverse()
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nested Lists -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-diagram-3"></i> Nested Lists</h4>
+            <div class="code-block"><pre>
+matrix = [[1,2,3], [4,5,6], [7,8,9]]
+print(matrix[1][2])   # 6
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- List Comprehensions -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-lightning"></i> List Comprehensions</h4>
+            <p>Concise way to create lists using loops and conditions.</p>
+            <div class="code-block"><pre>
+squares = [x**2 for x in range(5)]
+evens = [x for x in range(10) if x % 2 == 0]
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Built-in Functions -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-tools"></i> Built-in Functions</h4>
+            <div class="code-block"><pre>
+numbers = [4, 2, 9, 1]
+print(len(numbers))  # 4
+print(min(numbers))  # 1
+print(max(numbers))  # 9
+print(sum(numbers))  # 16
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copying Lists -->
+      <div class="col-md-6">
+        <div class="card shadow border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-copy"></i> Copying Lists</h4>
+            <div class="code-block"><pre>
+a = [1, 2, 3]
+b = a.copy()
+c = list(a)
+d = a[:]
+</pre></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pitfalls -->
+      <div class="col-12">
+        <div class="card shadow border-0">
+          <div class="card-body">
+            <h4 class="card-title"><i class="bi bi-exclamation-triangle"></i> Common Pitfalls</h4>
+            <p>Be careful when assigning lists directly — both variables refer to the same object.</p>
+            <div class="code-block"><pre>
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)  # [1, 2, 3, 4] (changed!)
+</pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exercises -->
+    <div class="exercise-box">
+      <h5><i class="bi bi-pencil-square"></i> Practice Exercises</h5>
+      <ol>
+        <li>Create a list of your 5 favorite books and print them in reverse order.</li>
+        <li>Use list comprehension to generate squares of numbers from 1 to 10.</li>
+        <li>Create a nested list to represent a 3x3 matrix and access the diagonal elements.</li>
+      </ol>
+    </div>
+
+    <!-- Next button -->
+    <div class="text-end mt-4">
+      <a href="tuples.html" class="btn btn-primary">
+        Next: Tuples <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light text-center py-3">
+    <small>© 2025 PyVerse | Python Learning Platform</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

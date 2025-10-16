@@ -1,126 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Syntax: Comments - PyVerse</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        body {
-            background: whitesmoke;
-            color: black;
-        }
-        .hero {
-            background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/python-bg.jpg') center/cover no-repeat;
-            color: #ffc107;
-            min-height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .section-title {
-            color: #0d6efd;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-        }
-        .example-box {
-            background: #111a22;
-            border-left: 5px solid #ffc107;
-            border-radius: 8px;
-            padding: 1.2rem;
-            color: #ffe082;
-            margin-bottom: 2rem;
-        }
-        .btn { border-radius: 25px; padding: 0.6rem 1.4rem;}
-        .navbar-brand i { font-size: 1.5rem; margin-right: 0.5rem; }
-        pre { background: #23272f; color: #ffe082; border-radius: 6px; padding: 1rem; }
-        ul { margin-left: 1.5rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Syntax & Comments - PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/syntax-bg.jpg') center/cover no-repeat;
+      color: #ffc107;
+      min-height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .example-box {
+      background: #111a22;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      color: #ffe082;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      border-radius: 25px;
+      padding: 0.6rem 1.4rem;
+    }
+    pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-playstation"></i> PyVerse</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
-                <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
-                <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
-                <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-playstation"></i> PyVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+        <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero text-center py-5">
-    <div class="container">
-        <img src="images/python-logo.png" alt="Python Logo" width="120" class="mb-2">
-        <h1 class="display-5 fw-bold">Python Syntax: Comments</h1>
-        <p class="lead text-light mt-3">Learn how to use comments in Python code to make your programs more readable and maintainable.</p>
-        <a href="basic.html" class="btn btn-lg btn-warning shadow mt-3">Back to Basics &rarr;</a>
-    </div>
+<section class="hero py-5">
+  <div class="container">
+    <img src="images/python-logo.png" alt="Python Logo" width="110" class="mb-4">
+    <h1 class="display-5 fw-bold">Python Syntax & Comments</h1>
+    <p class="lead text-light mt-3">Understanding the basic syntax and writing clean, well-documented code is the foundation of Python programming.</p>
+  </div>
 </section>
 
-<!-- What are Comments? -->
-<section class="container mb-5">
-    <h2 class="section-title">What are Comments?</h2>
-    <p>
-        <b>Comments</b> are lines in Python code that are ignored by the interpreter. They help explain your code, make it easier to read, or temporarily disable code during testing.
-    </p>
+<!-- Syntax Basics -->
+<section class="container my-5">
+  <h2 class="section-title">Python Syntax Overview</h2>
+  <p>Python syntax defines the set of rules that describe how a Python program is written and interpreted. Python emphasizes simplicity and readability.</p>
+  
+  <div class="example-box">
+    <b>Example: Simple Python Code</b>
+    <pre><code>print("Welcome to PyVerse!")
+x = 5
+y = 10
+print(x + y)</code></pre>
+  </div>
+
+  <p><b>Key Points:</b></p>
+  <ul>
+    <li>No need for semicolons at the end of statements.</li>
+    <li>Code blocks are defined by <b>indentation</b> (spaces), not braces <code>{}</code>.</li>
+    <li>Python uses <b>4 spaces</b> per indentation level (not tabs).</li>
+    <li>Case sensitivity matters — <code>MyVar</code> and <code>myvar</code> are different.</li>
+  </ul>
 </section>
 
-<!-- Single-line Comments -->
+<!-- Indentation -->
 <section class="container mb-5">
-    <h2 class="section-title">Single-line Comments</h2>
-    <div class="example-box">
-        <b>Syntax:</b> Use <code>#</code> to start a comment. Everything after <code>#</code> on that line is ignored.
-        <pre><code># This is a single-line comment
-print("Hello, World!")  # This comment is after code
-</code></pre>
-    </div>
+  <h2 class="section-title">Indentation in Python</h2>
+  <p>Indentation is used to define the scope of loops, functions, classes, and conditional statements.</p>
+  
+  <div class="example-box">
+    <b>Example:</b>
+    <pre><code>if 5 > 2:
+    print("Five is greater than two!")  # Correct indentation
+
+# Incorrect indentation example
+if 5 > 2:
+print("Five is greater than two!")  # ❌ This will cause an error</code></pre>
+  </div>
 </section>
 
-<!-- Multi-line Comments -->
+<!-- Comments -->
 <section class="container mb-5">
-    <h2 class="section-title">Multi-line Comments</h2>
-    <p>
-        Python does not have a dedicated multi-line comment syntax. You can use several <code>#</code> lines, or use a multi-line string (triple quotes) as a comment.
-    </p>
-    <div class="example-box">
-        <b>Example:</b>
-        <pre><code># This is a comment
-# that spans multiple lines
+  <h2 class="section-title">Comments in Python</h2>
+  <p>Comments are used to explain code and make it more readable. They are ignored by the Python interpreter.</p>
 
+  <div class="example-box">
+    <b>Single-line Comment</b>
+    <pre><code># This is a comment
+print("Hello, World!")  # This prints a message</code></pre>
+  </div>
+
+  <div class="example-box">
+    <b>Multi-line Comment</b>
+    <pre><code>"""
+This is a multi-line comment
+spanning multiple lines.
 """
-This is a multi-line string,
-often used as a multi-line comment.
-"""
-</code></pre>
-        <small class="text-warning">Note: Triple-quoted strings are not technically comments, but if not assigned to a variable, they are ignored by the interpreter.</small>
-    </div>
+print("Comments are ignored by Python!")</code></pre>
+  </div>
+
+  <p>✅ <b>Pro Tip:</b> Use meaningful comments to describe why a piece of code exists — not just what it does.</p>
 </section>
 
-<!-- Best Practices -->
+<!-- Practical Example -->
 <section class="container mb-5">
-    <h2 class="section-title">Best Practices for Comments</h2>
-    <ul>
-        <li>Use comments to explain <b>why</b> something is done, not <b>what</b> is done.</li>
-        <li>Keep comments up-to-date with code changes.</li>
-        <li>Write clear code so you need fewer comments.</li>
-        <li>Don't overuse comments—focus on readability.</li>
-    </ul>
+  <h2 class="section-title">Example: Clean & Commented Code</h2>
+  <div class="example-box">
+    <pre><code># Program to find the largest number
+numbers = [15, 42, 7, 23, 89, 3]
+
+# Initialize max_num with the first element
+max_num = numbers[0]
+
+# Loop through all numbers to find the maximum
+for num in numbers:
+    if num > max_num:
+        max_num = num
+
+print("The largest number is:", max_num)</code></pre>
+  </div>
 </section>
 
+<!-- Navigation -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-between mt-4">
+    <a href="installation.html" class="btn btn-outline-primary">
+      <i class="bi bi-arrow-left"></i> Back: Python Installation
+    </a>
+    <a href="variables.html" class="btn btn-primary">
+      Next: Python Variables <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Footer -->
 <footer class="bg-dark text-center text-light py-3 mt-5">
-    <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+  <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

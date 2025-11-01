@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Tuples - PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)), url('images/python-bg.jpg') center/cover no-repeat;
+      color: #ffc107;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .example-box {
+      background: #111a22;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.2rem;
+      color: #ffe082;
+      margin-bottom: 2rem;
+    }
+    .btn { border-radius: 25px; padding: 0.6rem 1.4rem; }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-playstation"></i>PyVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+        <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+        <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+        <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center py-5">
+  <div class="container">
+    <img src="images/python-logo.png" alt="Python Logo" width="120" class="mb-4">
+    <h1 class="display-4 fw-bold">Python Tuples</h1>
+    <p class="lead text-light mt-3">
+      Learn how to use immutable, ordered collections in Python to store multiple values.
+    </p>
+    <a href="coding.html" class="btn btn-lg btn-warning shadow mt-3">Try it Yourself &rarr;</a>
+  </div>
+</section>
+
+<!-- What are Tuples -->
+<section class="container mb-5">
+  <h2 class="section-title">What are Tuples?</h2>
+  <p>
+    A <b>tuple</b> is an ordered, immutable collection in Python. Unlike lists, tuples cannot be modified once created.
+    They are useful for storing fixed sets of data, like coordinates or database records.
+  </p>
+  <div class="example-box">
+    <pre><code>my_tuple = (10, 20, 30)
+print(my_tuple)
+
+# Access elements
+print(my_tuple[0])   # 10
+
+# Nested tuple
+nested = (1, 2, (3, 4))
+print(nested[2][1])  # 4</code></pre>
+  </div>
+</section>
+
+<!-- Tuple Methods -->
+<section class="container mb-5">
+  <h2 class="section-title">Tuple Methods</h2>
+  <p>Tuples support only a few methods since they are immutable:</p>
+  <div class="example-box">
+    <pre><code>nums = (1, 2, 3, 2, 1, 2)
+print(nums.count(2))   # 3 (number of times 2 appears)
+print(nums.index(3))   # 2 (position of first 3)</code></pre>
+  </div>
+</section>
+
+<!-- Immutability -->
+<section class="container mb-5">
+  <h2 class="section-title">Tuple Immutability</h2>
+  <p>
+    You cannot change, add, or remove items in a tuple after it’s created. However, tuples can contain mutable objects like lists.
+  </p>
+  <div class="example-box">
+    <pre><code>data = (1, [2, 3], 4)
+data[1].append(5)
+print(data)  # (1, [2, 3, 5], 4)</code></pre>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="container mb-5 d-flex justify-content-between">
+  <a href="list-advanced.html" class="btn btn-outline-primary">
+    <i class="bi bi-arrow-left"></i> Back: More on Lists
+  </a>
+  <a href="dictionaries.html" class="btn btn-primary">
+    Next: Dictionaries <i class="bi bi-arrow-right"></i>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

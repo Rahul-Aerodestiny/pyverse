@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iterations in Python - PyVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(13,17,23,0.93), rgba(13,17,23,0.93)),
+                  url('images/python-bg.jpg') center/cover no-repeat;
+      color: #ffc107;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-title {
+      color: #0d6efd;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .example-box {
+      background: #111a22;
+      border-left: 5px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.2rem;
+      color: #ffe082;
+      margin-bottom: 1.6rem;
+      overflow-x: auto;
+    }
+    pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+    .btn { border-radius: 25px; padding: 0.6rem 1.4rem; }
+    .muted-note { color: blue; opacity: 0.85; font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">PyVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
+          <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
+          <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+          <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-center py-5">
+    <div class="container">
+      <img src="images/python-logo.png" alt="Python Logo" width="110" class="mb-3">
+      <h1 class="display-4 fw-bold">Iterations in Python</h1>
+      <p class="lead text-light mt-3">
+        Master looping techniques: for, while, enumerate, zip, nesting, controls and comprehensions.
+      </p>
+      <a href="coding.html" class="btn btn-lg btn-warning shadow mt-3">Try it Yourself &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="container my-5">
+    <section>
+      <h2 class="section-title">Why Iteration?</h2>
+      <p class="muted-note">
+        Iteration lets your program repeat tasks. Learn idiomatic patterns — they make code shorter, faster and easier to read.
+      </p>
+    </section>
+
+    <section>
+      <h3 class="section-title">Basic <code>for</code> Loop</h3>
+      <div class="example-box">
+        <pre><code>fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+        <p class="muted-note mt-2">Iterates directly over elements — Pythonic and simple.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">The <code>while</code> Loop</h3>
+      <div class="example-box">
+        <pre><code>n = 1
+while n &lt;= 5:
+    print("n =", n)
+    n += 1</code></pre>
+        <p class="muted-note mt-2">Use when the number of iterations depends on a condition.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Using <code>range()</code></h3>
+      <div class="example-box">
+        <pre><code>for i in range(3):        # 0,1,2
+    print("Iteration", i)
+
+for i in range(1, 6):     # 1..5
+    print(i)</code></pre>
+        <p class="muted-note mt-2">Great for index-based loops and numeric sequences.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title"><code>enumerate()</code> — index + value</h3>
+      <div class="example-box">
+        <pre><code>names = ["Amar", "Akbar", "Anthony"]
+for idx, name in enumerate(names, start=1):
+    print(idx, name)</code></pre>
+        <p class="muted-note mt-2">Use <code>start=</code> to begin indexing from any number.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title"><code>zip()</code> — iterate in parallel</h3>
+      <div class="example-box">
+        <pre><code>subjects = ["Math", "Science", "English"]
+marks    = [90, 85, 88]
+
+for subject, mark in zip(subjects, marks):
+    print(subject, ":", mark)</code></pre>
+        <p class="muted-note mt-2">Stops at the shortest sequence; use <code>itertools.zip_longest()</code> for full coverage.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Nested Loops</h3>
+      <div class="example-box">
+        <pre><code>matrix = [
+  [1, 2, 3],
+  [4, 5, 6]
+]
+
+for row in matrix:
+    for val in row:
+        print(val)</code></pre>
+        <p class="muted-note mt-2">Useful for 2D data; be mindful of performance for deep nesting.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Loop Control: <code>break</code>, <code>continue</code>, <code>pass</code></h3>
+      <div class="example-box">
+        <pre><code>for i in range(6):
+    if i == 2:
+        continue    # skip 2
+    if i == 5:
+        break       # stop entirely
+    print(i)
+
+# pass is a placeholder
+for _ in range(3):
+    pass</code></pre>
+        <p class="muted-note mt-2">Use control keywords to shape loop behaviour precisely.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">List / Set / Dict Comprehensions</h3>
+      <div class="example-box">
+        <pre><code># List comprehension
+squares = [x*x for x in range(6)]
+
+# Conditional comprehension
+evens = [x for x in range(10) if x % 2 == 0]
+
+# Dict comprehension
+squares_map = {x: x*x for x in range(6)}</code></pre>
+        <p class="muted-note mt-2">Comprehensions are compact and fast — prefer them for simple transformations.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Iterator Protocol &amp; Generators (brief)</h3>
+      <div class="example-box">
+        <pre><code># A simple generator
+def gen_numbers(n):
+    for i in range(n):
+        yield i
+
+for num in gen_numbers(3):
+    print(num)</code></pre>
+        <p class="muted-note mt-2">Generators yield values lazily and save memory for large sequences.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Tips &amp; Common Pitfalls</h3>
+      <ul class="muted-note">
+        <li>Avoid modifying a list you’re iterating over — iterate over a copy instead.</li>
+        <li>Zip stops at the shortest input; use <code>zip_longest</code> if needed.</li>
+        <li>Use comprehensions for readability, but don’t cram complex logic into a single line.</li>
+        <li>Prefer enumerate over manual index tracking (more Pythonic).</li>
+      </ul>
+    </section>
+
+    <!-- Try it Yourself -->
+    <section class="text-center my-4">
+      <h2 class="section-title">Try it Yourself</h2>
+      <p class="muted-note">Play with these examples in your coding playground.</p>
+      <a href="coding.html" class="btn btn-warning btn-lg shadow">Go to Coding Playground &rarr;</a>
+    </section>
+
+    <!-- Navigation -->
+    <div class="d-flex justify-content-between my-4">
+      <a href="sets.html" class="btn btn-outline-primary">
+        &larr; Back: Sets
+      </a>
+      <a href="functions.html" class="btn btn-primary">
+        Next: Functions &rarr;
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-center text-light py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2025 PyVerse | Designed by Rahul Kumar</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#fdf7ff"/>
+  <path d="M70 140l30-60 30 30 20-40 20 70" fill="none" stroke="#8b5cf6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="70" cy="140" r="10" fill="#8b5cf6"/>
+  <circle cx="100" cy="80" r="10" fill="#8b5cf6"/>
+  <circle cx="130" cy="110" r="10" fill="#8b5cf6"/>
+  <circle cx="150" cy="100" r="10" fill="#8b5cf6"/>
+  <text x="100" y="176" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">AI + INNOVATION</text>
+</svg>

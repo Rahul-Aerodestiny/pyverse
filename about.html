@@ -8,27 +8,8 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="about-page">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-        <img src="images/pyverse_logo.png" alt="PyVerse" class="brand-logo">
-        <span>PyVerse</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="basic.html">Basic Python</a></li>
-          <li class="nav-item"><a class="nav-link" href="intermediate.html">Intermediate</a></li>
-          <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
-          <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Me</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="site-header"></div>
+<script src="loadHeader.js"></script>
 
   <main class="about-main container">
     <section class="hero-panel">
@@ -215,7 +196,9 @@
     </section>
   </main>
 
-  <footer class="footer">© 2026 Rahul Kumar • Engineering software, automation, simulation</footer>
+  <div id="site-footer"></div>
+  <script src="loadFooter.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function(){

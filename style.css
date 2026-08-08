@@ -22,6 +22,14 @@
   padding: 0.6rem 1.4rem;
 }
 
+.navbar-brand .brand-logo,
+#site-header .brand-logo {
+  height: 36px;
+  max-height: 36px !important;
+  width: auto;
+  display: inline-block;
+}
+
 body {
   background: #f8f9fa;
   font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
